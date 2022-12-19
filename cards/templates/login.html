@@ -1,0 +1,121 @@
+{% load static %}
+
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    body,html {
+        height: 100%;
+        margin: 0;}
+
+    .bg {
+        /* The image used */
+        background-image: url("static/images/backgrounds/back_ground_1.jpg");
+        /* Full height */
+        height: 100%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;}
+
+    .btn-circle.btn-xl {
+        width: 100px;
+        height: 100px;
+        padding: 0px 0px;
+        border-radius: 100%;
+        font-size: 10px;
+        text-align: left;}
+
+    .container {
+        position: relative;
+        text-align: center;
+        color: rgb(49, 59, 63);}
+
+    .centered 
+    {   color: rgb(44, 49, 65);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);}
+
+.inputs {
+    text-align: center;
+    border-style: none; 
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: blanchedalmond;
+    background-color: rgb(35, 53, 82);
+    outline: none; 
+    border-color: rgb(33, 53, 82);
+    border-radius: 10px;
+    margin: 10px;}
+
+input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+    transition: font-family Georgia, 'Times New Roman', Times, serif;}
+
+.text{
+    font-weight:bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;}
+
+
+
+.form{width:100%;}
+.left{float:left;width:250px;}
+.right{float:right;width:250px;}
+.center{margin:20px auto;width:250px;}
+
+
+
+
+</style>
+</head>
+
+<body>
+
+
+    <div class="bg">
+
+<br><br><br><br><br><br><br><br>
+
+            <div class="container">
+                <img src="static/images/backgrounds/blank.png" style="width:1000px;">
+
+                <div class="centered">
+                    
+                    <h1 class="text">Log-In</h1>
+                    <br>
+                    <h4 class="text">To log-in please fill out <br>
+                        your name and password below</h4>
+                    
+                        
+                        <br> <br> <br> <br>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+
+                        <input type="submit" value="ENTER">  
+
+
+                    </form> 
+                    
+                    
+                    </div>
+              </div>
+              
+<br>
+<br>
+
+    </div>
+
+
+</body>
+
+</html>
+
+
+<!-- action= "{% url 'welcome' %}" -->

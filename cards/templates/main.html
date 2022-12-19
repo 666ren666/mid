@@ -1,0 +1,59 @@
+ <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("static/images/backgrounds/back_ground_1.jpg");
+  /* Full height */
+  height: 100%; 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn-circle.btn-xl {
+			width: 100px;
+			height: 100px;
+			padding: 0px 0px;
+			border-radius: 100%;
+			font-size: 10px;
+			text-align: left;
+		}
+
+</style>
+</head>
+
+<body>
+
+    <div class="bg">
+
+        <div class="header"style="text-align: center" >
+
+          <br><br>   <br><br>   <br><br>
+          <a href="{% url 'login' %}"><img src="static/images/buttons/login.png" width="400"></a>
+          <img src="static/images/backgrounds/space.png" width='100' >
+          <a href="{% url 'signin' %}"><img src="static/images/buttons/signin.png" width="400"></a>
+
+        </div>
+
+        <div style="text-align: center">
+          
+          <img src="static/images/logos/cardz.png" width='800' >
+
+        </div>
+      
+
+
+
+</body>
+</html>
+
+
